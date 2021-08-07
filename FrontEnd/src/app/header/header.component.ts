@@ -11,6 +11,7 @@ import { AuthService } from '../services/auth.service';
 export class HeaderComponent implements OnInit {
 
   isauth: boolean;
+  lastSign;
 
   constructor(private authService: AuthService) { }
 
@@ -19,6 +20,7 @@ export class HeaderComponent implements OnInit {
       (user) => {
         if(user) {
           this.isauth = true;
+          this.lastSign = user.metadata.lastSignInTime;
         } else {
           this.isauth = false;
         }

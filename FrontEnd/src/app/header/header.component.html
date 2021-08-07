@@ -1,11 +1,12 @@
-<nav class="navbar">
+<nav class="navbar bg-info text-white">
   <div class="navbar-brand">
     <a class="navbar-item">
       <img style="height: 30px" src="assets/images/logo.png">
     </a>
   </div>
   <div class="container-fluid">
-    <span class="nav navbar-nav navbar-brand">Groupe Scolaire Afrique Unie</span>
+    <span class="nav navbar-nav bg-error navbar-brand">Groupe Scolaire Afrique Unie</span>
+    time : {{lastSign}}
     <ul class="nav navbar-nav navbar-right">
       <li routerLinkActive="active" *ngIf="!isauth">
         <a routerLink="auth/signup">Créer un compte</a>

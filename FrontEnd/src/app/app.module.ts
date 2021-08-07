@@ -12,12 +12,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './services/auth.service';
+import { HomeComponent } from './home/home.component';
+import { StudentsComponent } from './students/students.component';
 
 const appRoute: Routes = [
   { path: 'auth/signup', component: SignupComponent },
   { path: 'auth/signin', component: SigninComponent },
-  { path: '', redirectTo: 'books', pathMatch: 'full' },
-  { path: '**', redirectTo: 'books' }
+  { path: 'home', component: HomeComponent},
+  { path: 'students', canActivate: [AuthGuardService], component: StudentsComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home' }
 ]
 
 @NgModule({
@@ -26,7 +30,9 @@ const appRoute: Routes = [
     HeaderComponent,
     FooterComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    HomeComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule,
