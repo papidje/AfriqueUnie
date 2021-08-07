@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item">
+      <img style="height: 30px" src="assets/images/logo.png">
+    </a>
+  </div>
+  <div class="container-fluid">
+    <span class="nav navbar-nav navbar-brand">Groupe Scolaire Afrique Unie</span>
+    <ul class="nav navbar-nav navbar-right">
+      <li routerLinkActive="active" *ngIf="!isauth">
+        <a routerLink="auth/signup">Créer un compte</a>
+      </li>
+      <li routerLinkActive="active" *ngIf="!isauth">
+        <a routerLink="auth/signin">Connexion</a>
+      </li>
+      <li>
+        <a (click)="onSignOut()" *ngIf="isauth" style="cursor: pointer">Déconnexion</a>
+      </li>
+    </ul>
+  </div>
+</nav>
