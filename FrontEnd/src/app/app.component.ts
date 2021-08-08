@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import firebase from '@firebase/app';
-import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,24 +8,18 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Afrique Unie';
-  options: FormGroup;
 
-  constructor(fb: FormBuilder) {
-    this.options = fb.group({
-      bottom: 0,
-      fixed: false,
-      top: 0
-    });
+  constructor() {
     var firebaseConfig = {
-      apiKey: "AIzaSyAD241qoCDZV71XecJCsIHRytTVnIJkNJs",
-      authDomain: "bookshelves-e7a25.firebaseapp.com",
-      projectId: "bookshelves-e7a25",
-      storageBucket: "bookshelves-e7a25.appspot.com",
-      messagingSenderId: "238766067091",
-      appId: "1:238766067091:web:5b3f2d6a28c585861eac66"
+      apiKey: "AIzaSyAkLArAIPE0aomI96vAfnpyfT9GY5Gkhec",
+      authDomain: "afriqueunie-4c2c3.firebaseapp.com",
+      databaseURL: "https://afriqueunie-4c2c3-default-rtdb.firebaseio.com",
+      projectId: "afriqueunie-4c2c3",
+      storageBucket: "afriqueunie-4c2c3.appspot.com",
+      messagingSenderId: "146143548716",
+      appId: "1:146143548716:web:ce15d3592c71dd3bc9c889"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   }
-  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 }

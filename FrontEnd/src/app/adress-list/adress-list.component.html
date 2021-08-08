@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Vos adresses</h2>
+    <div class="list-group">
+      <div class="list-group-item" *ngFor="let adress of adressList">
+        <h2>{{adress.reference}}</h2>
+        <h3>Coordonées</h3>
+        <ul>
+          <li>Latitude : {{adress.latitude}}</li>
+          <li>Longitude : {{adress.longitude}}</li>
+        </ul>
+      </div>
+    </div>
+    <button class="btn btn-primary" (click)="onNewAdress()">Nouvelle Adresse</button>
+  </div>
+</div>

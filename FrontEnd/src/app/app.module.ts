@@ -14,12 +14,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './services/auth.service';
 import { HomeComponent } from './home/home.component';
 import { StudentsComponent } from './students/students.component';
+import { AdressListComponent } from './adress-list/adress-list.component';
+import { AdressFromComponent } from './adress-list/adress-from/adress-from.component';
 
 const appRoute: Routes = [
   { path: 'auth/signup', component: SignupComponent },
   { path: 'auth/signin', component: SigninComponent },
   { path: 'home', component: HomeComponent},
   { path: 'students', canActivate: [AuthGuardService], component: StudentsComponent},
+  { path: 'adress', canActivate: [AuthGuardService], component: AdressListComponent},
+  { path: 'adress/new', canActivate: [AuthGuardService], component: AdressFromComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' }
 ]
@@ -32,7 +36,9 @@ const appRoute: Routes = [
     SigninComponent,
     SignupComponent,
     HomeComponent,
-    StudentsComponent
+    StudentsComponent,
+    AdressListComponent,
+    AdressFromComponent
   ],
   imports: [
     BrowserModule,
