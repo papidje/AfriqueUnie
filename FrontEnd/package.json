@@ -22,6 +22,7 @@
     "bootstrap": "^3.4.1",
     "core-js": "^2.6.12",
     "firebase": "^8.9.0",
+    "graphql-iso-date": "^3.6.1",
     "rxjs": "~6.6.7",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
