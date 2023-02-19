@@ -1,0 +1,49 @@
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 100px 0;
+  align-content: center;
+}
+
+.sidebar li {
+  padding: 15px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sidebar li:hover {
+  background-color: #3464e9;
+}
+
+.container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar {
+  width: 100px;
+  background-color: #0be0f0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  overflow: auto; /* rend le contenu principal défilable */
+  height: calc(100vh - 100px);
+}
+
+.menu-logo {
+  max-width: 70%;
+  display: block;
+}
